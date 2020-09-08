@@ -9,6 +9,6 @@ namespace Lecture_3_OOConcepts
     class Car
     {
         protected Wheel[] wheels;
-        protected 
+        protected Engine engine;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lecture_3_OOConcepts
 {
-    class Engine
+    class ClassExample
     {
     }
 }
