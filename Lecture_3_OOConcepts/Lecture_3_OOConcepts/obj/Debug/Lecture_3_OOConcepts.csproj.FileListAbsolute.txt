@@ -1,0 +1,7 @@
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_3_OOConcepts\Lecture_3_OOConcepts\obj\Debug\Lecture_3_OOConcepts.csprojAssemblyReference.cache
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_3_OOConcepts\Lecture_3_OOConcepts\obj\Debug\Lecture_3_OOConcepts.csproj.CoreCompileInputs.cache
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_3_OOConcepts\Lecture_3_OOConcepts\bin\Debug\Lecture_3_OOConcepts.exe.config
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_3_OOConcepts\Lecture_3_OOConcepts\bin\Debug\Lecture_3_OOConcepts.exe
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_3_OOConcepts\Lecture_3_OOConcepts\bin\Debug\Lecture_3_OOConcepts.pdb
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_3_OOConcepts\Lecture_3_OOConcepts\obj\Debug\Lecture_3_OOConcepts.exe
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_3_OOConcepts\Lecture_3_OOConcepts\obj\Debug\Lecture_3_OOConcepts.pdb

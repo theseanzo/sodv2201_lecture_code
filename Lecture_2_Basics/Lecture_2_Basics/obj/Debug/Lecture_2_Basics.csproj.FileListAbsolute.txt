@@ -1,0 +1,7 @@
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_2_Basics\Lecture_2_Basics\obj\Debug\Lecture_2_Basics.csprojAssemblyReference.cache
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_2_Basics\Lecture_2_Basics\obj\Debug\Lecture_2_Basics.csproj.CoreCompileInputs.cache
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_2_Basics\Lecture_2_Basics\bin\Debug\Lecture_2_Basics.exe.config
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_2_Basics\Lecture_2_Basics\bin\Debug\Lecture_2_Basics.exe
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_2_Basics\Lecture_2_Basics\bin\Debug\Lecture_2_Basics.pdb
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_2_Basics\Lecture_2_Basics\obj\Debug\Lecture_2_Basics.exe
+C:\Users\amaze\Dropbox (Personal)\BowValley\Fall2020\OOP\sodv2201_lectures\Lecture_2_Basics\Lecture_2_Basics\obj\Debug\Lecture_2_Basics.pdb
