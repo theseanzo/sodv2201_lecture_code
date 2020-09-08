@@ -6,7 +6,5 @@ using System.Threading.Tasks;
 
 namespace Lecture_3_OOConcepts
 {
-    class ClassExample
-    {
-    }
+
 }
