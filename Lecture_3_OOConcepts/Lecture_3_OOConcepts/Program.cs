@@ -11,8 +11,16 @@ namespace Lecture_3_OOConcepts
         //in this lecture we are covering classes, encapsulation, inheritance, polymorphism, virtual and abstract classes
         static void Main(string[] args)
         {
-
+            classBasicsExample();
         }
+
+        #region Basics of Classes
+        static void classBasicsExample()
+        {
+            Rectangle baseRectangle = new Rectangle(5.0f, 5.0f);
+            baseRectangle.Width = 10.0f;
+        }
+        #endregion
 
         #region Polymorphism
         #endregion
@@ -31,6 +39,7 @@ namespace Lecture_3_OOConcepts
         }
         #endregion
         #region Function Overloading
+
         #endregion
         #region Virtual Functions
         #endregion

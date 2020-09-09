@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lecture_3_OOConcepts
 {
+    //public, private, protected, internal
+
     class Base
     {
         public string name = "Base";
