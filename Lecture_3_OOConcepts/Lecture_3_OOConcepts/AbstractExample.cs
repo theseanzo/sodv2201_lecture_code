@@ -30,7 +30,19 @@ namespace Lecture_3_OOConcepts
     }
     public class GermanShepard : Dog
     {
-        
+        public override void Bark()
+        {
+            Console.WriteLine("Whiney tiny bark");
+        }
+        public override void Walk()
+        {
+            Console.WriteLine("Tiny walk");
+
+        }
+        public override void Sit()
+        {
+            Console.WriteLine("Sit like a good dog");
+        }
     }
 
     public abstract class CommodoreView
