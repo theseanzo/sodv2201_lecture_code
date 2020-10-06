@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace Lecture_Generic_Types
 {
     #region Point example
-    class Point<T>
+    class Point<T> 
     {
         public T X { get; set; }
         public T Y { get; set; }
 
         public override string ToString()
         {
-            return String.Format("Point(x: {0}, y: {1}", X, Y);
+            return String.Format("Point(x: {0}, y: {1}) ", X, Y); 
         }
     }
     #endregion
@@ -47,7 +47,7 @@ namespace Lecture_Generic_Types
                     return mObject.Value;
                 }
             }
-            return default(T2);
+            return default(T2); 
         }
 
     }

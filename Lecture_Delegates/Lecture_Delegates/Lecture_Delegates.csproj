@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{506C2916-9D75-4516-8356-A13DB0EDF70C}</ProjectGuid>
+    <ProjectGuid>{7FCFAAE7-E82C-4F7C-B82C-94210BE6526D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lecture_Generic_Types</RootNamespace>
-    <AssemblyName>Lecture_Generic_Types</AssemblyName>
+    <RootNamespace>Lecture_Delegates</RootNamespace>
+    <AssemblyName>Lecture_Delegates</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConstraintsExample.cs" />
-    <Compile Include="GenericsExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
