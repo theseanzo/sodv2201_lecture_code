@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Lecture_Generic_Types
 {
     #region Constrain by data type
-    class ConstrainedPoint<T> where T : struct
+    class ConstrainedPoint<T> where T : struct //by value type
     {
         public T X { get; set; }
         public T Y { get; set; }
@@ -45,7 +45,70 @@ namespace Lecture_Generic_Types
     class Lion : IMammal { }
     class CuteLion : Lion { }
     class ConstrainByInterface<T> where T : IMammal { }
+    class AnimalList<T> where T: IAnimal
+    {
+        List<T> animals = new List<T>();
+        public AnimalList()
+        {
 
+        }
+        public void Add(T animal)
+        {
+            animals.Add(animal);
+        }
+        public void Congregate()
+        {
+            //some sort of operation on the list of animals
+        }
+    }
+
+    interface NetworkObject
+    {
+
+
+    }
+
+    class RaspberryPI: NetworkObject
+    {
+
+    }
+
+    class DesktopPC: NetworkObject
+    {
+
+    }
+
+    class DeviceList<T> where T: NetworkObject
+    {
+        List<T> devices = new List<T>();
+        public void Add(T device)
+        {
+            this.devices.Add(device);
+        }
+        public void Update()
+        {
+
+        }
+    }
+
+    class BaseGeneric<T> where T: class
+    {
+        T X { get; set; }
+        T Y { get; set; }
+        public bool EqualsX(T x)
+        {
+            return this.X.Equals(x);
+        }
+    }
+
+    class Derived<T>: BaseGeneric<T> where T: class
+    {
+    }
+
+    class AnimalAndBozo<T> where T : Bozo, IAnimal
+    {
+
+    } 
     #endregion
 
 }

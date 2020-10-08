@@ -11,7 +11,10 @@ namespace Lecture_Generic_Types
     {
         public T X { get; set; }
         public T Y { get; set; }
-
+        public bool EqualsX(T value)
+        {
+            return X.Equals(value);
+        }
         public override string ToString()
         {
             return String.Format("Point(x: {0}, y: {1}) ", X, Y); 
