@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7FCFAAE7-E82C-4F7C-B82C-94210BE6526D}</ProjectGuid>
+    <ProjectGuid>{ED6B4B4B-36EE-4D5C-A740-BB1593FD573A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lecture_Delegates</RootNamespace>
-    <AssemblyName>Lecture_Delegates</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>Lecture_Lambdas</RootNamespace>
+    <AssemblyName>Lecture_Lambdas</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DelegateExamples.cs" />
-    <Compile Include="LionExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

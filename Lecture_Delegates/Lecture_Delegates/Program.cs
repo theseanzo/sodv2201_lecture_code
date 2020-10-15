@@ -13,20 +13,23 @@ namespace Lecture_Delegates
         static void Main(string[] args)
         {
             #region Intro to delegates
-            Print printDelegate = DelegateExamples.PrintNumber;
-            printDelegate(100);
-            #endregion
-            #region Passing delegate as a function parameter
-            //PassingDelegate(DelegateExamples.PrintMoney, 100);
+            //Print printDelegate = DelegateExamples.PrintMoney;// DelegateExamples.PrintNumber;
+            //printDelegate(100);
+
+            //#endregion
+            //#region Passing delegate as a function parameter
+            //PassingDelegate(DoNothing, 100);
             #endregion
             #region Square and Half
-            //float[] data = { 2, 1, 3, 4, 5, 1, 5 };
+            //float[] data = { 1, 2, 3, 4, 5, 6, 7 };
             //ModifyFloatArray(data, DelegateExamples.Half);
             //PrintArray<float>(data);
             //ModifyFloatArray(data, DelegateExamples.Square);
             //PrintArray<float>(data);
             #endregion
-            #region Multiple delegates for one function
+            #region Multiple functions for one delegate
+
+            //Print printDelegate = DelegateExamples.PrintNumber;
             //printDelegate += DelegateExamples.PrintMoney;
             //printDelegate(100);
             #endregion
@@ -40,17 +43,27 @@ namespace Lecture_Delegates
             //ActionPrint(10);
             #endregion
             #region Keeping it Anonymous
-            //Print p = delegate (int val)
-            //{
-            //    Console.WriteLine("It's my turn now to print a value of {0}", val);
-            //};
-            //p(50);
+            Print p = delegate (int val)
+            {
+                Console.WriteLine("It's my turn now to print a value of {0}", val);
+            };
+            p(50);
+            PassingDelegate(delegate(int value) { Console.WriteLine("Look ma, I'm being passed and with the number {0}", value); }, 100);
             #endregion
-
+            Func<int, int, int> addNumbers = TrollAdd;
+            int trollValue = addNumbers(2, 2);
+            Console.WriteLine("2 + 2 is {0}", trollValue);
 
             Console.ReadKey();
         }
+        public static int TrollAdd(int x, int y)
+        {
+            return x + y + 1;
+        }
+        public static void DoNothing(int value)
+        {
 
+        }
         public static void PassingDelegate(Print delegatePrint, int number)
         {
             delegatePrint(number);
