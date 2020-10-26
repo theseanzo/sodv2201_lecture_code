@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture_Forms", "Lecture_Forms\Lecture_Forms.csproj", "{52503D74-E237-4B7B-9A27-32AFD0450361}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52503D74-E237-4B7B-9A27-32AFD0450361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52503D74-E237-4B7B-9A27-32AFD0450361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52503D74-E237-4B7B-9A27-32AFD0450361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52503D74-E237-4B7B-9A27-32AFD0450361}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D328A1BF-EDFD-411A-BA6C-CB52F6AD021E}
+	EndGlobalSection
+EndGlobal

@@ -1,24 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Lecture_Lambdas
 {
-    class Dog
-    {
-        public string Name { get; set; }
-        public bool HypoAllergenic { get; set; }
-        public string BarkSound { get; set; }
-        public void Bark()
-        {
 
-            Console.WriteLine(BarkSound);
-
-        }
-    }
     class Program
     {
         //new DogBreed { Name = "Portuguese Water Dog", HypoAllergenic = true},  
@@ -34,32 +24,32 @@ namespace Lecture_Lambdas
             //hypoAllergenic = dogBreeds.Find(new delegate (DogBreed dog) { return dog.HypoAllergenic };);
             #region Using lambdas
             //let's try using lambdas to do the same thing!
-            hypoAllergenic = dogBreeds.Find(x => x.HypoAllergenic); //note here: the x is not given a variable type; this is inferred by the compiler
-            dogBreeds.Add(new Dog { Name = "Portuguese Water Dog", HypoAllergenic = true });
-            List<Dog> hypoAllergenicBreeds = dogBreeds.FindAll(x/*says we are passing a value x*/ => /*logic part*/!x.HypoAllergenic);
-            //statement lambas
-            Action<Dog> announceBreed = dogBreed =>
-            {
-                Console.WriteLine("Breed name is {0}", dogBreed.Name);
-            };
-            announceBreed(hypoAllergenic);
+            //hypoAllergenic = dogBreeds.Find(x => x.HypoAllergenic); //note here: the x is not given a variable type; this is inferred by the compiler
+            //dogBreeds.Add(new Dog { Name = "Portuguese Water Dog", HypoAllergenic = true });
+            //List<Dog> hypoAllergenicBreeds = dogBreeds.FindAll(x/*says we are passing a value x*/ => /*logic part*/!x.HypoAllergenic);
+            ////statement lambas
+            //Action<Dog> announceBreed = dogBreed =>
+            //{
+            //    Console.WriteLine("Breed name is {0}", dogBreed.Name);
+            //};
+            //announceBreed(hypoAllergenic);
             #endregion
             #region Integer Filter
-            List<int> values = new List<int>(){ 0, 5, 7, 26, 99, 54, 33, 12, 18, 11, 0, 6, 8, 10 };
-            string input;
-            while ((input = Console.ReadLine()) != "exit")
-            {
-                try
-                {
-                    int filterValue = Int32.Parse(input);
-                    List<int> filteredValues = values.FindAll(x => x > filterValue);
-                    filteredValues.ForEach(x => { Console.Write("{0} ",x); });// Console.Write);
-                }
-                catch(Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-            }
+            //List<int> values = new List<int>(){ 0, 5, 7, 26, 99, 54, 33, 12, 18, 11, 0, 6, 8, 10 };
+            //string input;
+            //while ((input = Console.ReadLine()) != "exit")
+            //{
+            //    try
+            //    {
+            //        int filterValue = Int32.Parse(input);
+            //        List<int> filteredValues = values.FindAll(x => x > filterValue);
+            //        filteredValues.ForEach(x => { Console.Write("{0} ",x); });// Console.Write);
+            //    }
+            //    catch(Exception e)
+            //    {
+            //        Console.WriteLine(e);
+            //    }
+            //}
             #endregion
 
             #region Events
@@ -69,10 +59,38 @@ namespace Lecture_Lambdas
             dogPack.AddDog(murtaugh);
             dogPack.AddDog(sparky);
             #endregion
+            String input;
+            RunningSumCalculator runningSum = new RunningSumCalculator();
+            runningSum.MultipleOf10 += PrintIfMultipleOf10;
+            while((input=Console.ReadLine()) != "exit")
+            {
+                int value = Int32.Parse(input);
+                runningSum.AddNumber(value);// += value;
+            }
         }
+        public static void PrintIfMultipleOf10()
+        {
+            Console.WriteLine("We finally found a multiple of 10");
+        }
+
         static bool FindIfHypoAllergenic(Dog dogBreed)
         {
             return dogBreed.HypoAllergenic;
         }
+    }
+    class RunningSumCalculator
+    {
+        private int sum = 0;
+        public delegate void VoidFunction();
+
+        public event Action MultipleOf10;
+        public void AddNumber(int num)
+        {
+
+            this.sum += num;
+            if(this.sum % 10 == 0)
+                MultipleOf10();
+        }
+
     }
 }
