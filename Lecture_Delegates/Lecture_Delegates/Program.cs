@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,11 +11,19 @@ namespace Lecture_Delegates
     {
         public delegate void Print(int value);
         public delegate float FloatModification(float value);
+        public delegate int NumberAdder(int x, int y);
         static void Main(string[] args)
         {
             #region Intro to delegates
-            //Print printDelegate = DelegateExamples.PrintMoney;// DelegateExamples.PrintNumber;
-            //printDelegate(100);
+            //Action<int> printDelegate = DelegateExamples.PrintMoney;
+
+            Print printDelegate = DelegateExamples.PrintMoney;// DelegateExamples.PrintNumber;
+            // Func<int, int, int> addNumbers = (x, y) => { return x + y};
+            NumberAdder addNumbers = TrollAdd;
+            addNumbers(2, 2);
+            printDelegate += DelegateExamples.PrintNumber;
+
+            printDelegate(100);
 
             //#endregion
             //#region Passing delegate as a function parameter

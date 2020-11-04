@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Messaging;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,22 +13,28 @@ namespace Lecture_Lambdas
     class Program
     {
         //new DogBreed { Name = "Portuguese Water Dog", HypoAllergenic = true},  
+
         static void Main(string[] args)
         {
-            List<Dog> dogBreeds = new List<Dog>() { new Dog { Name = "German Shepard", HypoAllergenic = false }, new Dog { Name = "Shiba Inu", HypoAllergenic = false }, 
-                new Dog { Name = "Poodle", HypoAllergenic = true},  new Dog { Name = "Yorkshire Terrier", HypoAllergenic = false }   };
+            List<Dog> dogBreeds = new List<Dog>() { new Dog { Name = "German Shepard", Loyal = true, HypoAllergenic = false }, new Dog { Name = "Shiba Inu", Loyal=False, HypoAllergenic = false },
+                new Dog { Name = "Poodle",Loyal=true, HypoAllergenic = true},  new Dog { Name = "Yorkshire Terrier", Loyal=true,  HypoAllergenic = false }   };
             //using predicates/delegates
-           // Func<int, int, int> returnFunction; //<input, input, output>
+            // Func<int, int, int> returnFunction; //<input, input, output>
             //Action<String> printFunction;//always a void function
-           // Predicate<int> predicateFunction;//always returns a boolean value
+            // Predicate<int> predicateFunction;//always returns a boolean value
             Dog hypoAllergenic = dogBreeds.Find(FindIfHypoAllergenic);
             //hypoAllergenic = dogBreeds.Find(new delegate (DogBreed dog) { return dog.HypoAllergenic };);
             #region Using lambdas
             //let's try using lambdas to do the same thing!
-            //hypoAllergenic = dogBreeds.Find(x => x.HypoAllergenic); //note here: the x is not given a variable type; this is inferred by the compiler
+            hypoAllergenic = dogBreeds.Find(x => {
+                Console.WriteLine("Checking if loyal and hypoallergenic");
+                return x.HypoAllergenic && x.Loyal; }
+            ); //note here: the x is not given a variable type; this is inferred by the compiler
             //dogBreeds.Add(new Dog { Name = "Portuguese Water Dog", HypoAllergenic = true });
             //List<Dog> hypoAllergenicBreeds = dogBreeds.FindAll(x/*says we are passing a value x*/ => /*logic part*/!x.HypoAllergenic);
             ////statement lambas
+            ///
+            Func<Dog, Dog, bool> dogComparison = (x, y) => {return x.HypoAllergenic == y.HypoAllergenic};
             //Action<Dog> announceBreed = dogBreed =>
             //{
             //    Console.WriteLine("Breed name is {0}", dogBreed.Name);

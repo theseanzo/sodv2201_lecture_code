@@ -17,6 +17,8 @@ namespace Lecture_Lambdas
     {
         public string Name { get; set; }
         public bool HypoAllergenic { get; set; }
+
+        public bool Loyal { get; set; }
         public string BarkSound { get; set; }
         private Human human;
         public event Action<Dog> DogBarked;

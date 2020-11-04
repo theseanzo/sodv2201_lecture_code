@@ -17,24 +17,35 @@ namespace Lecture_Forms
         {
             InitializeComponent();
             dogForm = new PopupForm();
+            ButtonListener buttonListener = new ButtonListener(this);
         }
-
-        private void button1_MouseEnter(object sender, EventArgs e)
+        private void button_MouseEnter(object sender, EventArgs e)
         {
-            button1.BackColor = Color.Red;
+            if (!(sender is Button))
+                return;
+            ((Button)sender).BackColor = Color.Red;
+            helloLabel.Hide();
         }
-
-        private void button1_MouseLeave(object sender, EventArgs e)
+        private void button_MouseLeave(object sender, EventArgs e)
         {
-            button1.BackColor = Color.CornflowerBlue;
-        }
+            if (!(sender is Button))
+                return;
+            ((Button)sender).BackColor = Color.CornflowerBlue;
+            helloLabel.Show();
 
+        }
         private void testOpenFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.ShowDialog();
             this.openFileTextBox.Text = fileDialog.FileName;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dogForm = new PopupForm();
+            dogForm.Show();
         }
     }
 }
